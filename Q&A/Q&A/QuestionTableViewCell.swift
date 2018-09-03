@@ -21,4 +21,9 @@ class QuestionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    //Outlets to labels in custom cell.
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var askerLabel: UILabel!
+    @IBOutlet weak var changingLabel: UILabel!
+    
 }
