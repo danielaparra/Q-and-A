@@ -19,7 +19,6 @@ class AskQuestionViewController: UIViewController {
             questionController?.createQuestion(question: questionText, asker: askerName)
             navigationController?.popViewController(animated: true)
         }
-        
     }
     
     var questionController: QuestionController?

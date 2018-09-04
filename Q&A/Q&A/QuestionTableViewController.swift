@@ -64,8 +64,6 @@ class QuestionTableViewController: UITableViewController {
             let question = questionController.questions[indexPath.row]
             destinationVC.questionController = questionController
             destinationVC.question = question
-            
-            destinationVC.updateViews()
         }
     }
     
