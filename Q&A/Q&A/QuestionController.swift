@@ -34,7 +34,7 @@ class QuestionController {
     }
     
     //Delete question.
-    func deleteQuestion(question: Question) {
+    func delete(question: Question) {
         //Get index of question.
         guard let index = questions.index(of: question) else {return}
         questions.remove(at: index)

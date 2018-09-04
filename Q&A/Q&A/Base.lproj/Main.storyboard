@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="129" id="v6V-0t-3FF" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="129" id="v6V-0t-3FF" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="129"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v6V-0t-3FF" id="eAp-Ry-XSl">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v6V-0t-3FF" id="eAp-Ry-XSl" customClass="QuestionTableViewCell" customModule="Q_A" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="128.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -183,7 +183,7 @@
         <!--Title-->
         <scene sceneID="dPk-d6-bJg">
             <objects>
-                <viewController id="j8U-e8-hl9" sceneMemberID="viewController">
+                <viewController id="j8U-e8-hl9" customClass="AnswerViewController" customModule="Q_A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUc-ek-L6u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,7 +203,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPB-Ap-IMu">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPB-Ap-IMu">
                                         <rect key="frame" x="0.0" y="76" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="EWI-CE-CZG"/>
@@ -212,7 +212,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-8G-239">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-8G-239">
                                         <rect key="frame" x="0.0" y="114" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YFE-tD-rBF"/>
@@ -252,8 +252,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit Answer"/>
                             </button>
+                            <connections>
+                                <action selector="submitAnswer:" destination="j8U-e8-hl9" id="EMR-23-xze"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="zBY-8G-239" id="V85-Yo-BL1"/>
+                        <outlet property="answererTextField" destination="KPB-Ap-IMu" id="Qw4-aw-x76"/>
+                        <outlet property="askerLabel" destination="g9N-Wo-enF" id="W0p-wP-bKR"/>
+                        <outlet property="questionLabel" destination="E29-h8-oPX" id="tjN-MC-un4"/>
+                        <outlet property="submitAnswer" destination="SAD-cW-t5h" id="DgW-E3-PVx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmE-ba-Pbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

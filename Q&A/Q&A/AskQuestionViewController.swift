@@ -35,8 +35,14 @@ class AskQuestionViewController: UIViewController {
         //Unwraps text before creating question model.
         guard let askerName = askerNameTextField.text,
             let questionText = questionTextView.text else {return}
+        if askerName != "" && questionText != "" {
+            questionController?.createQuestion(question: questionText, asker: askerName)
+            navigationController?.popViewController(animated: true)
+        }
         
     }
+    
+    var questionController: QuestionController?
     
     //Outlets to text fields and views in this view
     @IBOutlet weak var askerNameTextField: UITextField!
