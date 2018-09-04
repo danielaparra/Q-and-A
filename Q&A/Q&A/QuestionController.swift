@@ -40,5 +40,5 @@ class QuestionController {
         questions.remove(at: index)
     }
     
-    private(set) var questions: [Question] = []
+    private(set) var questions: [Question] = [Question(question: "Who?", asker: "Me")]
 }

@@ -19,6 +19,12 @@ class QuestionTableViewCell: UITableViewCell {
         questionLabel.text = question.question
         askerLabel.text = question.asker
         
+        if question.answer == nil && question.answerer == nil {
+            changingLabel.text = "Can you answer this?"
+        } else {
+            changingLabel.text = "Tap to view answer."
+        }
+        
     }
     
     //Update variable when change occurs
