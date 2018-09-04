@@ -10,8 +10,16 @@ import UIKit
 
 class AnswerViewController: UIViewController {
     
+    //Set up text labels and text fields.
     func updateViews() {
+        questionLabel.text = question?.question
+        askerLabel.text = question?.asker
         
+        //Set text for answer and answerer if not nil
+        guard let answer = question?.answer,
+            let answerer = question?.answerer else {return}
+        answerTextField.text = answer
+        answererTextField.text = answerer
     }
     
     //Submit answer as long as text field are filled out.

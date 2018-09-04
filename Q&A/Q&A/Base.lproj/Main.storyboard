@@ -109,14 +109,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Q&amp;A" id="P9g-xt-F6d">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="mZk-mu-4Pj">
+                        <barButtonItem key="rightBarButtonItem" title="Ask Question" style="plain" id="mZk-mu-4Pj">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EK5-CL-QdP">
                                 <rect key="frame" x="268" y="7" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ask Question"/>
                             </button>
                             <connections>
-                                <segue destination="ri5-lN-x9S" kind="show" identifier="AskQuestion" id="CQt-U1-uFk"/>
+                                <segue destination="ri5-lN-x9S" kind="show" identifier="AskQuestion" id="hN9-zK-qCJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
