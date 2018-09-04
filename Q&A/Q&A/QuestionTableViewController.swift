@@ -48,7 +48,12 @@ class QuestionTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        //Pass question model to answer question scene.
+        if segue.identifier == "AnswerQuestion" {
+            guard let destinationVC = segue.destination as? AnswerViewController else {return}
+            
+            destinationVC.questionController = questionController
+        }
     }
     
     var questionController = QuestionController()

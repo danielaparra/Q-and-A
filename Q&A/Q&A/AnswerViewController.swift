@@ -10,16 +10,26 @@ import UIKit
 
 class AnswerViewController: UIViewController {
     
+    func updateViews() {
+        
+    }
+    
+    //Submit answer as long as text field are filled out.
     @IBAction func submitAnswer(_ sender: Any) {
         guard let answerer = answerTextField.text,
-            let answer = answerTextField.text else {return}
+            let answer = answerTextField.text,
+            let question = question else {return}
         
-        //Update designated question model
+        //Update designated question model.
         if answerer != "" && answer != "" {
+            questionController?.updateQuestion(question: question, answer: answer, answerer: answerer)
             
+            //Pop to the previous controller.
+            navigationController?.popViewController(animated: true)
         }
     }
     
+    var question: Question?
     var questionController: QuestionController?
     
     //Outlets

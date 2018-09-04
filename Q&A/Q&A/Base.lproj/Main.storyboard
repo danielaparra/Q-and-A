@@ -99,7 +99,7 @@
                                     <outlet property="askerLabel" destination="BoO-xD-ue9" id="Nd6-9c-HBa"/>
                                     <outlet property="changingLabel" destination="T35-hH-VVA" id="fdh-rT-QDw"/>
                                     <outlet property="questionLabel" destination="kFI-BP-fW8" id="wer-rT-Mtn"/>
-                                    <segue destination="j8U-e8-hl9" kind="show" identifier="AnswerQuestion" id="1qm-Ri-RAR"/>
+                                    <segue destination="j8U-e8-hl9" kind="show" identifier="AnswerQuestion" id="lbg-vu-jlt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -108,13 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				7BD3DD9D213C7C71006BDC1E /* AppDelegate.swift */,
+				7BD3DDD5213DFBEC006BDC1E /* AnswerViewController.swift */,
 				7BD3DDD3213DC588006BDC1E /* AskQuestionViewController.swift */,
 				7BD3DDCF213CA3F6006BDC1E /* QuestionTableViewCell.swift */,
 				7BD3DDD1213CA42C006BDC1E /* QuestionTableViewController.swift */,
 				7BD3DDCB213C7D3B006BDC1E /* Question.swift */,
 				7BD3DDCD213C7E61006BDC1E /* QuestionController.swift */,
 				7BD3DDA1213C7C71006BDC1E /* Main.storyboard */,
-				7BD3DDD5213DFBEC006BDC1E /* AnswerViewController.swift */,
 				7BD3DDA4213C7C7C006BDC1E /* Assets.xcassets */,
 				7BD3DDA6213C7C7C006BDC1E /* LaunchScreen.storyboard */,
 				7BD3DDA9213C7C7C006BDC1E /* Info.plist */,
